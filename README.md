@@ -9,7 +9,7 @@ SDK java pour interagir avec le site (http://www.consoplus.nc/) de la Carte Cons
 
 # Howto
 
-Simply :
+Usage :
 
 ```java
 public static void main(String[] args) {
