@@ -50,6 +50,8 @@ public class CarteConsoCrawler {
     private int solde;
     private String soldeDescription;
     private String adresse;
+    private String telephone;
+    private String mobilis;
 
     private HtmlPage accountPage;
     
@@ -101,6 +103,18 @@ public class CarteConsoCrawler {
     public static String extractEmail(String rawEmailInput) {
         String out = rawEmailInput;
         out = out.replace("- Email : ", "");
+        return out;
+    }
+    
+    public static String extractTelephone(String rawTelephoneInput) {
+        String out = rawTelephoneInput;
+        out = out.replace("- Tél : ", "");
+        return out;
+    }
+    
+    public static String extractMobilis(String rawMobilisInput) {
+        String out = rawMobilisInput;
+        out = out.replace("- Mobilis : ", "");
         return out;
     }
 
@@ -172,6 +186,18 @@ public class CarteConsoCrawler {
         setEmail(email);
         logger.info("eMail : <" + getEmail() + ">");
 
+        // telephone fixe
+        String telephone = ((HtmlElement) (this.accountPage.getFirstByXPath("/html/body/div/div[2]/div/section[1]/div/div/article/div[2]/p[5]"))).asText();
+        telephone = CarteConsoCrawler.extractTelephone(telephone);
+        setTelephone(telephone);
+        logger.info("Telephone : <" + getTelephone() + ">");
+        
+        // mobilis
+        String mobilis = ((HtmlElement) (this.accountPage.getFirstByXPath("/html/body/div/div[2]/div/section[1]/div/div/article/div[2]/p[6]"))).asText();
+        mobilis = CarteConsoCrawler.extractMobilis(mobilis);
+        setMobilis(mobilis);
+        logger.info("Telephone : <" + getMobilis() + ">");
+        
     }
 
     // Getters and setters
@@ -264,6 +290,34 @@ public class CarteConsoCrawler {
      */
     public String getSoldeDescription() {
         return soldeDescription;
+    }
+    
+    /**
+     * @return the telephone
+     */
+    public String getTelephone() {
+        return telephone;
+    }
+
+    /**
+     * @param telephone the telephone to set
+     */
+    public void setTelephone(String telephone) {
+        this.telephone = telephone;
+    }
+    
+    /**
+     * @return the mobilis
+     */
+    public String getMobilis() {
+        return mobilis;
+    }
+
+    /**
+     * @param mobilis the mobilis to set
+     */
+    public void setMobilis(String mobilis) {
+        this.mobilis = mobilis;
     }
 
     /**
