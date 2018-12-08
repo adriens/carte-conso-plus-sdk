@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.org/adriens/carte-conso-plus-sdk.svg?branch=master)](https://travis-ci.org/adriens/carte-conso-plus-sdk)
 [![](https://jitpack.io/v/adriens/carte-conso-plus-sdk.svg)](https://jitpack.io/#adriens/carte-conso-plus-sdk)
-[![Dependency Status](https://beta.gemnasium.com/badges/github.com/adriens/carte-conso-plus-sdk.svg)](https://beta.gemnasium.com/projects/github.com/adriens/carte-conso-plus-sdk)
+
 
 # carte-conso-plus-sdk
 SDK java pour interagir avec le site (http://www.consoplus.nc/) de la Carte Conso + (Nouvelle-Calédonie).
