@@ -14,6 +14,10 @@ import com.gargoylesoftware.htmlunit.html.HtmlPasswordInput;
 import com.gargoylesoftware.htmlunit.html.HtmlSubmitInput;
 import com.gargoylesoftware.htmlunit.html.HtmlTextInput;
 import java.io.IOException;
+import java.util.List;
+import javax.xml.bind.JAXBContext;
+import javax.xml.bind.JAXBException;
+import javax.xml.bind.Unmarshaller;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -54,9 +58,8 @@ public class CarteConsoCrawler {
     private String mobilis;
 
     private HtmlPage accountPage;
-    
-    // Constructors
 
+    // Constructors
     public CarteConsoCrawler() {
     }
 
@@ -105,13 +108,13 @@ public class CarteConsoCrawler {
         out = out.replace("- Email : ", "");
         return out;
     }
-    
+
     public static String extractTelephone(String rawTelephoneInput) {
         String out = rawTelephoneInput;
         out = out.replace("- Tél : ", "");
         return out;
     }
-    
+
     public static String extractMobilis(String rawMobilisInput) {
         String out = rawMobilisInput;
         out = out.replace("- Mobilis : ", "");
@@ -191,13 +194,13 @@ public class CarteConsoCrawler {
         telephone = CarteConsoCrawler.extractTelephone(telephone);
         setTelephone(telephone);
         logger.info("Telephone : <" + getTelephone() + ">");
-        
+
         // mobilis
         String mobilis = ((HtmlElement) (this.accountPage.getFirstByXPath("/html/body/div/div[2]/div/section[1]/div/div/article/div[2]/p[6]"))).asText();
         mobilis = CarteConsoCrawler.extractMobilis(mobilis);
         setMobilis(mobilis);
         logger.info("Telephone : <" + getMobilis() + ">");
-        
+
     }
 
     // Getters and setters
@@ -291,7 +294,7 @@ public class CarteConsoCrawler {
     public String getSoldeDescription() {
         return soldeDescription;
     }
-    
+
     /**
      * @return the telephone
      */
@@ -305,7 +308,7 @@ public class CarteConsoCrawler {
     public void setTelephone(String telephone) {
         this.telephone = telephone;
     }
-    
+
     /**
      * @return the mobilis
      */
@@ -331,6 +334,13 @@ public class CarteConsoCrawler {
         return "Solde de <" + getNoCompte() + "> : <" + getSolde() + ">";
     }
 
+    public static List<Partner> getPartners() throws JAXBException {
+        JAXBContext jaxbContext = JAXBContext.newInstance(Partners.class);
+        Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
+        Partners parts = (Partners) jaxbUnmarshaller.unmarshal(Partners.class.getResourceAsStream("/partners.xml"));
+        return parts.getPartners();
+    }
+
     // Yet a dummy main to show how to deal with the class
     public static void main(String[] args) {
         try {
@@ -339,8 +349,9 @@ public class CarteConsoCrawler {
             CarteConsoCrawler wrap = new CarteConsoCrawler(login, passwd);
             logger.info(wrap.toString());
             logger.info("Bye.");
+            logger.info("Found <" + CarteConsoCrawler.getPartners().size() + "> partners.");
             System.exit(0);
-        } catch (IOException ex) {
+        } catch (Exception ex) {
             ex.printStackTrace();
             System.exit(1);
         }

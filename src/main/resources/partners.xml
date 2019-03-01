@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<partners>
+    <partner>
+        <logoUrl></logoUrl>
+        <name>Carrefour Express</name>
+        <wwwHomePage>https://www.facebook.com/carrefour.express.nc/</wwwHomePage>
+    </partner>
+    <partner>
+        <logoUrl></logoUrl>
+        <name>Carrefour Market</name>
+        <wwwHomePage>https://www.facebook.com/carrefour.market.nc/</wwwHomePage>
+    </partner>
+    <partner>
+        <logoUrl></logoUrl>
+        <name>Champion</name>
+        <wwwHomePage>https://www.1012.nc/professionnels/details/6ab630c03b6698846c941900c86316a09acc3b84/champion_magenta</wwwHomePage>
+    </partner>
+    <partner>
+        <logoUrl></logoUrl>
+        <name>Carrefour</name>
+        <wwwHomePage>https://www.facebook.com/CarrefourKenuIn/</wwwHomePage>
+    </partner>
+    <!-- Devenu un carrefour express
+    <partner>
+        <logoUrl></logoUrl>
+        <name>Arizona</name>
+        <wwwHomePage></wwwHomePage>
+    </partner>
+    -->
+    <partner>
+        <logoUrl></logoUrl>
+        <name>Conforama</name>
+        <wwwHomePage>https://www.facebook.com/ConforamaNoumea/</wwwHomePage>
+    </partner>
+    <partner>
+        <logoUrl></logoUrl>
+        <name>Lagoon</name>
+        <wwwHomePage>https://www.facebook.com/lagoonNC</wwwHomePage>
+    </partner>
+    <partner>
+        <logoUrl></logoUrl>
+        <name>Beauty Success</name>
+        <wwwHomePage>https://www.facebook.com/beautysuccessnoumea/</wwwHomePage>
+    </partner>
+    <partner>
+        <logoUrl></logoUrl>
+        <name>Mobil</name>
+        <wwwHomePage>https://www.facebook.com/lesoffresmobil/</wwwHomePage>
+    </partner>
+    <partner>
+        <logoUrl></logoUrl>
+        <name>Inglot</name>
+        <wwwHomePage>https://www.facebook.com/inglotkenuin</wwwHomePage>
+    </partner>
+</partners>
