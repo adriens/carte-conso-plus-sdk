@@ -42,7 +42,7 @@ public class CarteConsoCrawler {
     }
 
     public static final String URL_LOGIN = "http://www.consoplus.nc/compte.asp";
-
+    
     final static Logger logger = LoggerFactory.getLogger(CarteConsoCrawler.class);
 
     private String noCompte;
@@ -75,6 +75,14 @@ public class CarteConsoCrawler {
             logger.error("Unable to fetch datas : " + ex.getMessage());
             throw ex;
         }
+    }
+
+    public static String getMagazineUrl(int numMagazine){
+        String out = "https://www.flipsnack.com/KICOM/conso-n-" + numMagazine + "/full-view.html";
+        return out;
+    }
+    public static String getMagazineUrl(){
+        return "https://www.flipsnack.com/KICOM/";
     }
 
     // Some static cleanup methods
