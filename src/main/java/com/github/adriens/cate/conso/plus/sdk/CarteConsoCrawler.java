@@ -141,6 +141,10 @@ public class CarteConsoCrawler {
         webClient.getOptions().setDownloadImages(false);
         return webClient;
     }
+    
+    public static MagazineConsoPlus getLatestMagazine() throws Exception{
+        return getConsoPlusMagazines().get(0);
+    }
 
     public static ArrayList<MagazineConsoPlus> getConsoPlusMagazines() throws Exception {
         WebClient webClient = buildWebClient();
