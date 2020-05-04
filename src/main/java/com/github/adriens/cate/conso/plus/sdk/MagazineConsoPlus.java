@@ -42,9 +42,14 @@ public class MagazineConsoPlus {
         }
         else if (flipsnackUrl.contains("https://www.flipsnack.com/KICOM/conso-n-")){
             // https://www.flipsnack.com/KICOM/conso-n-187/full-view.html
+           
             String tmp = flipsnackUrl.replace("https://www.flipsnack.com/KICOM/conso-n-", "");
             tmp = tmp.replace("/full-view.html", "");
             tmp = tmp.replace(".html", "");
+            if(tmp.contains("-")){
+                tmp = tmp.substring(0, tmp.indexOf("-") - 1);
+            }
+            
             out = Integer.parseInt(tmp);
             return out;
         }
