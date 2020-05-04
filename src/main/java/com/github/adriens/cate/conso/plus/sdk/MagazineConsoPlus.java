@@ -47,7 +47,7 @@ public class MagazineConsoPlus {
             tmp = tmp.replace("/full-view.html", "");
             tmp = tmp.replace(".html", "");
             if(tmp.contains("-")){
-                tmp = tmp.substring(0, tmp.indexOf("-") - 1);
+                tmp = tmp.substring(0, tmp.indexOf("-"));
             }
             
             out = Integer.parseInt(tmp);
@@ -80,7 +80,7 @@ public class MagazineConsoPlus {
             return "";
         }
         else{
-            return getTitle();
+            return getTitle() + " (" + getNumMag() + ")";
         }
     }
     /**
