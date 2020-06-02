@@ -54,6 +54,7 @@ public class CarteConsoCrawler {
     private String prenom;
     private String email;
     private int solde;
+    private int soldeValeur;
     private String soldeDescription;
     private String adresse;
     private String telephone;
@@ -215,6 +216,16 @@ public class CarteConsoCrawler {
         setSoldeDescription(details);
         logger.info("Details : <" + getSoldeDescription() + ">");
 
+        // details solde
+        ///html/body/div/div[2]/div/section[1]/div/div/article/div[2]/p[9]
+        int startIndex = details.indexOf("achat de ");
+        int endIndex = details.indexOf(" F.");
+        String strSoldeValue = details.substring(startIndex+9, endIndex);
+        int soldeValue = Integer.parseInt(strSoldeValue);
+        setSoldeValeur(soldeValue);
+        logger.info("Found money : <" + getSoldeValeur() + ">");
+
+        
         //nom
         // /html/body/div/div[2]/div/section[1]/div/div/article/div[2]/p[2]
         String nom = ((HtmlElement) (this.accountPage.getFirstByXPath("/html/body/div/div[2]/div/section[1]/div/div/article/div[2]/p[2]"))).asText();
@@ -337,6 +348,20 @@ public class CarteConsoCrawler {
      */
     public void setSolde(int solde) {
         this.solde = solde;
+    }
+    
+    /**
+     * @return the money value of the solde
+     */
+    public int getSoldeValeur() {
+        return soldeValeur;
+    }
+
+    /**
+     * @param soldeValeur the money value of the solde to set
+     */
+    public void setSoldeValeur(int soldeValeur) {
+        this.soldeValeur = soldeValeur;
     }
 
     /**
