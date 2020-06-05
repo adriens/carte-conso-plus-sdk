@@ -16,6 +16,8 @@ import com.gargoylesoftware.htmlunit.html.HtmlTextInput;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Unmarshaller;
@@ -215,16 +217,9 @@ public class CarteConsoCrawler {
         details = details.replace("\n", "").replace("\r", "");
         setSoldeDescription(details);
         logger.info("Details : <" + getSoldeDescription() + ">");
-
-        // details solde
-        ///html/body/div/div[2]/div/section[1]/div/div/article/div[2]/p[9]
-        int startIndex = details.indexOf("achat de ");
-        int endIndex = details.indexOf(" F.");
-        String strSoldeValue = details.substring(startIndex+9, endIndex);
-        int soldeValue = Integer.parseInt(strSoldeValue);
-        setSoldeValeur(soldeValue);
-        logger.info("Found money : <" + getSoldeValeur() + ">");
-
+        
+        // valeur solde
+        fillUpSoldeValeur();
         
         //nom
         // /html/body/div/div[2]/div/section[1]/div/div/article/div[2]/p[2]
@@ -263,6 +258,17 @@ public class CarteConsoCrawler {
         setMobilis(mobilis);
         logger.info("Telephone : <" + getMobilis() + ">");
 
+    }
+    
+    void fillUpSoldeValeur() {
+        // valeur solde
+        String regExp = "(\\D*\\d*\\D*)(\\d*)";
+        Pattern pattern = Pattern.compile(regExp);
+        Matcher matcher = pattern.matcher(this.soldeDescription);
+        String strSoldeValue = "0";
+        if (matcher.find()) strSoldeValue = matcher.group(2);
+        setSoldeValeur(Integer.parseInt(strSoldeValue));
+        logger.info("Found money : <" + getSoldeValeur() + ">");
     }
 
     // Getters and setters
