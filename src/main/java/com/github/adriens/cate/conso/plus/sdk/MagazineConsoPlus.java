@@ -53,6 +53,17 @@ public class MagazineConsoPlus {
             out = Integer.parseInt(tmp);
             return out;
         }
+        else if (flipsnackUrl.contains("https://www.flipsnack.com/KICOM/n-")){
+            // https://www.flipsnack.com/KICOM/n-191-ao-t-2020/full-view.html
+           
+            String tmp = flipsnackUrl.replace("https://www.flipsnack.com/KICOM/n-", "");
+            tmp = tmp.replace("/full-view.html", "");
+
+            if(tmp.contains("-")) tmp = tmp.substring(0, tmp.indexOf("-"));
+
+            out = Integer.parseInt(tmp);
+            return out;
+        }
         else{
             throw new Exception("Unable to get magazine id from url: <" + flipsnackUrl + ">");
         }
