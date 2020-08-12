@@ -4,52 +4,62 @@
         <logoUrl>http://www.consoplus.nc/img/partenaires/logos/crf_express.jpg</logoUrl>
         <name>Carrefour Express</name>
         <wwwHomePage>https://www.facebook.com/carrefour.express.nc/</wwwHomePage>
+        <infos>En obtenant 20 points par tranche de 2.000 F.</infos>
     </partner>
     <partner>
         <logoUrl>http://www.consoplus.nc/img/partenaires/logos/crf_market.jpg</logoUrl>
         <name>Carrefour Market</name>
         <wwwHomePage>https://www.facebook.com/carrefour.market.nc/</wwwHomePage>
+        <infos>En obtenant 20 points par tranche de 2.000 F.</infos>
     </partner>
     <partner>
         <logoUrl>http://www.consoplus.nc/img/partenaires/logos/champion.jpg</logoUrl>
         <name>Champion</name>
         <wwwHomePage>https://www.1012.nc/professionnels/details/6ab630c03b6698846c941900c86316a09acc3b84/champion_magenta</wwwHomePage>
+        <infos>En obtenant 20 points par tranche de 2.000 F.</infos>
     </partner>
     <partner>
         <logoUrl>http://www.consoplus.nc/img/partenaires/logos/carf_kenuin.jpg</logoUrl>
         <name>Carrefour</name>
         <wwwHomePage>https://www.facebook.com/CarrefourKenuIn/</wwwHomePage>
+        <infos>En obtenant 20 points par tranche de 2.000 F.</infos>
     </partner>
     <!-- Devenu un carrefour express
     <partner>
         <logoUrl></logoUrl>
         <name>Arizona</name>
         <wwwHomePage></wwwHomePage>
+        <infos></infos>
     </partner>
     -->
     <partner>
         <logoUrl>http://www.consoplus.nc/img/partenaires/logos/conforama.jpg</logoUrl>
         <name>Conforama</name>
         <wwwHomePage>https://www.facebook.com/ConforamaNoumea/</wwwHomePage>
+        <infos>En obtenant 10 points tous les 2.000 F d’achat à partir de 2.000 F d’achat.</infos>
     </partner>
     <partner>
         <logoUrl>http://www.consoplus.nc/img/partenaires/logos/lagoon.jpg</logoUrl>
         <name>Lagoon</name>
         <wwwHomePage>https://www.facebook.com/lagoonNC</wwwHomePage>
+        <infos>En obtenant 1 point tous les 100 F d’achat, après avoir effectué votre inscription dans leur rubrique « espace client » sur www.lagoon.nc</infos>
     </partner>
     <partner>
         <logoUrl>http://www.consoplus.nc/img/partenaires/logos/beauty_success.jpg</logoUrl>
         <name>Beauty Success</name>
         <wwwHomePage>https://www.facebook.com/beautysuccessnoumea/</wwwHomePage>
+        <infos>En obtenant 10 points tous les 2.000 F d’achat à partir de 2.000 F d’achat.</infos>
     </partner>
     <partner>
         <logoUrl>http://www.consoplus.nc/img/partenaires/logos/mobil.jpg</logoUrl>
         <name>Mobil</name>
         <wwwHomePage>https://www.facebook.com/lesoffresmobil/</wwwHomePage>
+        <infos>En obtenant 10 points tous les 2.000 F d’achat à partir de 2.000 F d’achat.</infos>
     </partner>
     <partner>
         <logoUrl>http://www.consoplus.nc/img/partenaires/logos/INGLOT.jpg</logoUrl>
         <name>Inglot</name>
         <wwwHomePage>https://www.facebook.com/inglotkenuin</wwwHomePage>
+        <infos>En obtenant 10 points tous les 2.000 F d’achat à partir de 2.000 F d’achat.</infos>
     </partner>
 </partners>
