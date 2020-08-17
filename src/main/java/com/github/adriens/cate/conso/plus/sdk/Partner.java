@@ -14,7 +14,8 @@ public class Partner {
     private String name;
     private String logoUrl;
     private String wwwHomePage;
-
+    private String infos;
+    
     /**
      * @return the name
      */
@@ -59,6 +60,20 @@ public class Partner {
      */
     public void setWwwHomePage(String wwwHomePage) {
         this.wwwHomePage = wwwHomePage;
+    }
+
+    /**
+     * @return the infos
+     */
+    public String getInfos() {
+        return infos;
+    }
+
+    /**
+     * @param infos the infos to set
+     */
+    public void setInfos(String infos) {
+        this.infos = infos;
     }
 
 }
